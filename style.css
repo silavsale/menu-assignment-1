@@ -1,0 +1,67 @@
+*{
+  margin: 0;
+  padding: 0;
+
+}
+body{
+	
+}
+
+header{
+  text-align: center;
+  /* border: 1px solid red; */
+  /* width: 50%; */
+  margin-left: auto;
+  margin-right: auto;
+  padding: 20px;
+  background-color: lightblue;
+  color: white;
+  text-shadow: 1px 1px black;
+}
+
+.price{
+  background-color: orange;
+  padding: 50px;
+}
+
+section{
+  position: relative;
+  /* width: 50%; */
+}
+section#sec1{
+  text-align: left;
+  /* border: 1px solid red; */
+  width: 50%;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 20px;
+  background-size: cover;
+  color: black;
+  /* font-weight: 80px; */
+  font-size: 20px;
+}
+section#sec1 h1{
+  font-size: 30px;
+  text-decoration: underline;
+  color: black;
+}
+
+section#sec1 button{
+  padding: 5px;
+  width: 100px;
+}
+
+#sec2{
+ position: absolute;
+  left: 700px;
+  bottom: 420px;
+  color: black;
+  font-size: 20px;
+  box-sizing: border-box;
+
+}
+
+#sec2 td,th{
+
+  text-align: right;
+}

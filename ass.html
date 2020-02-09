@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>Lunch Price</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <header>
+    <h1>Assignment - 1</h1>
+  </header>
+
+  <div class='price'>
+    <section id="sec1">
+      <h1>Lunch selections</h1>
+      <br>
+      <form>
+        <input type="checkbox" class="checkboxes" id="check1" value="7.99" onclick="Check()"> Fried chiken ($ 7.99)<br>
+        <input type="checkbox" id="check2" value="9.99" onclick="Check2()"> Fried halibut ($ 9.99)<br>
+        <input type="checkbox" id="check3" value="7.99" onclick="Check3()"> Hamburger ($7.99)<br>
+        <input type="checkbox" id="check4" value="12.99" onclick="Check4()"> Grilled salmon ($12.99)<br>
+        <input type="checkbox" id="check5" value="5.99" onclick="Check5()"> Side salad ($5.99)<br>
+        <button type="button" name="button" onclick="Print()"> Calculate</button>
+      </form>
+    </section>
+    <section id="sec2">
+      <table style="width:120%">
+        <tr>
+          <td> item total</td>
+          <td id="total"> 0.00</td>
+        </tr>
+        <tr>
+          <td> Tax</td>
+          <td id="tax"> 0.00</td>
+        </tr>
+        <tr>
+          <th> Total with tax</th>
+          <th id="final"> $0.00</th>
+        </tr>
+      </table>
+    </section>
+  </div>
+
+  <script>
+
+    var tax1 = 0;
+    var tax2 = 0;
+    var tax3 = 0;
+    var tax4 = 0;
+    var tax5 = 0;
+    var checked1 = 0;
+    var checked2 = 0;
+    var checked3 = 0;
+    var checked4 = 0;
+    var checked5 = 0;
+
+    function Check() {
+      if (document.querySelector("#check1:checked")) {
+        checked1 = document.getElementById("check1").value;
+        checked1 = parseFloat(checked1);
+        tax1 = tax1 + (checked1 * 0.05);
+        tax1 = parseFloat(tax1);
+      } else {
+        checked1 = 0;
+        tax1 = 0;
+      }
+      document.getElementById("total").innerHTML = checked1 + checked2 + checked3 + checked4 + checked5;
+      document.getElementById("tax").innerHTML = (tax1 + tax2 + tax3 + tax4 + tax5).toFixed(2);
+    }
+
+    function Check2() {
+      if (document.querySelector("#check2:checked")) {
+        checked2 = document.getElementById("check2").value;
+        checked2 = parseFloat(checked2);
+        tax2 = tax2 + (checked2 * 0.05);
+        tax2 = parseFloat(tax2);
+      } else {
+        checked2 = 0;
+        tax2 = 0;
+      }
+      document.getElementById("total").innerHTML = checked1 + checked2 + checked3 + checked4 + checked5;
+      document.getElementById("tax").innerHTML = (tax1 + tax2 + tax3 + tax4 + tax5).toFixed(2);
+    }
+    function Check3() {
+      if (document.querySelector("#check3:checked")) {
+        checked3 = document.getElementById("check3").value;
+        checked3 = parseFloat(checked3);
+        tax3 = tax3 + (checked3 * 0.05);
+        tax3 = parseFloat(tax3);
+      } else {
+        checked3 = 0;
+        tax3 = 0;
+      }
+      document.getElementById("total").innerHTML = checked1 + checked2 + checked3 + checked4 + checked5;
+      document.getElementById("tax").innerHTML = (tax1 + tax2 + tax3 + tax4 + tax5).toFixed(2);
+    }
+    function Check4() {
+      if (document.querySelector("#check4:checked")) {
+        checked4 = document.getElementById("check4").value;
+        checked4 = parseFloat(checked4);
+        tax4 = tax4 + (checked4 * 0.05);
+        tax4 = parseFloat(tax4);
+      } else {
+        checked4 = 0;
+        tax4 = 0;
+      }
+      document.getElementById("total").innerHTML = checked1 + checked2 + checked3 + checked4 + checked5;
+      document.getElementById("tax").innerHTML = (tax1 + tax2 + tax3 + tax4 + tax5).toFixed(2);
+    }
+    function Check5() {
+      if (document.querySelector("#check5:checked")) {
+        checked5 = document.getElementById("check5").value;
+        checked5 = parseFloat(checked5);
+        tax5 = tax5 + (checked5 * 0.05);
+        tax5 = parseFloat(tax5);
+      } else {
+        checked5 = 0;
+        tax5 = 0;
+      }
+      document.getElementById("total").innerHTML = checked1 + checked2 + checked3 + checked4 + checked5;
+      document.getElementById("tax").innerHTML = (tax1 + tax2 + tax3 + tax4 + tax5).toFixed(2);
+    }
+
+    function Print() {
+      document.getElementById("final").innerHTML = (tax1 + tax2 + tax3 + tax4 + tax5 + checked1 + checked2 + checked3 + checked4 + checked5).toFixed(2);
+    }
+
+  </script>
+
+</body>
+
+</html>
